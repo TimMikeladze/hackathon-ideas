@@ -1,0 +1,12 @@
+#action-button {
+    bottom: 45px;
+    right: 24px;
+}
+
+.card {
+    overflow: visible !important;
+}
+
+.content {
+    padding-top: 20px;
+}

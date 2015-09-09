@@ -1,0 +1,8 @@
+<template name="joinTeam">
+    <div id="idea-join-team-modal-{{_id}}" class="modal">
+        <div class="modal-content">
+            <h4>Join team</h4>
+            {{> quickForm doc=this schema="TeamMemberSchema" id="joinTeamForm" buttonContent="Join" type="method-update" meteormethod="joinTeam"}}
+        </div>
+</div>
+</template>

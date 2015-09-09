@@ -1,0 +1,8 @@
+<template name="leaveTeam">
+    <div id="idea-leave-team-modal-{{_id}}" class="modal">
+        <div class="modal-content">
+            <h4>Leave team</h4>
+            {{> quickForm doc=this schema="TeamMemberSchema" omitFields="name" id="leaveTeamForm" buttonContent="Leave" type="method-update" meteormethod="leaveTeam"}}
+        </div>
+    </div>
+</template>

@@ -1,0 +1,49 @@
+<template name="idea">
+    <div class="card blue hoverable">
+        <div class="card-content white-text">
+            <span class="card-title"><b>{{ title }}</b></span>
+
+            <p>
+                <b>Submitted by:</b>  {{ submittedBy }}
+            </p>
+
+            <p>
+                <b>Description:</b>  {{ description }}
+            </p>
+
+            <p>
+                <b>Technologies:</b>  {{ technologies }}
+            </p>
+
+            <p>
+                <b>Team members:</b>
+                {{ teamMembers }}
+            </p>
+
+        </div>
+
+        <div class="card-action right-align">
+            <a class='dropdown-button' href='#' data-activates='idea-actions-{{_id}}'>
+                <i class="material-icons right white-text">more_vert</i>
+            </a>
+
+            <ul id='idea-actions-{{_id}}' class='dropdown-content'>
+                <li>
+                    <a class="idea-edit" href="/ideas/edit/{{_id}}">Edit</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="idea-join-team" href="#">Join</a>
+                </li>
+                <li>
+                    <a class="idea-leave-team" href="#">Leave</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    {{> joinTeam this}}
+    {{> leaveTeam this}}
+
+</template>
